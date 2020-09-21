@@ -4,6 +4,7 @@
 // Inicialice notebook con valores al azar para la memoria (entre 4096 y 32768 megabytes)
 // y el procesador (entre 0.25 y 10 gigaflops).
 
+
 package cl.ptf.taller3;
 
 import java.util.Random;
@@ -26,7 +27,10 @@ public class SistemaOperativo extends Programa {
         // Math.random()*10 -> [0, 10[ -> [0, 9.99] aprox
         // Math.random()*(10-0.25) + 0.25 -> [0.25, 10[ -> [0.25, 9.99]
 
-        notebook = new Computador(memoria, procesador);
+        // Inicialice en la clase SistemaOperativo la velocidad de red con un valor al azar
+        // (entre 1 y 950 Mbps).
+        int red = 1 + rnd.nextInt(950);
+        notebook = new Computador(memoria, procesador, red);
     }
 
 
@@ -52,12 +56,20 @@ public class SistemaOperativo extends Programa {
             System.out.println("No hay memoria disponible para ejecutar el programa.");
         }
 
+    }
 
-
-
+    // Incluya a nivel de SistemaOperativo el método enviarArchivo y envíe un archivo entre dos Computadores.
+    // Para enviarArchivo se requiere conocer el peso del archivo en megabytes y el Computador de destino; la
+    // transferencia se realizará a la menor velocidad de red disponible entre ambos Computadores.
+    // Indique el tiempo estimado de transferencia del archivo.
+    public void enviarArchivo( int peso_archivo, Computador destino ) {
+        // notebook.getRed(); // velocidad de transferencia de red en Mbps origen
+        // destino.getRed(); // velocidad de transferencia de red en Mbps destino
+        // peso_archivo; // peso en MB del archivo a transferir (1 MB = 8 bits)
     }
 
     public Computador getNotebook() {
         return notebook;
     }
+
 }
