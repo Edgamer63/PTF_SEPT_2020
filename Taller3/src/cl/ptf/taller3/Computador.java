@@ -1,7 +1,7 @@
-// Construya la clase Computador con atributos memoria (megabytes) y procesador (gigaflops).
+package cl.ptf.taller3;// Construya la clase cl.ptf.taller3.Computador con atributos memoria (megabytes) y procesador (gigaflops).
 // La memoria y el procesador no pueden ser manipulados desde fuera de la clase. Debe además
 // crear el constructor.
-// Luego, cree una instancia de la clase Computador, asignándole 4096 megabytes de memoria y
+// Luego, cree una instancia de la clase cl.ptf.taller3.Computador, asignándole 4096 megabytes de memoria y
 // 5.43 gigaflops de procesador.
 
 public class Computador {

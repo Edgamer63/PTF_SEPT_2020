@@ -1,4 +1,4 @@
-// Construya la clase Programa con atributos consumoMemoria (megabytes) y cargaTrabajo
+package cl.ptf.taller3;// Construya la clase cl.ptf.taller3.Programa con atributos consumoMemoria (megabytes) y cargaTrabajo
 // (gigaflop); el consumo de memoria y la carga de trabajo no deben poder ser
 // modificados desde el exterior de la clase. Debe además crear el constructor de la clase.
 
