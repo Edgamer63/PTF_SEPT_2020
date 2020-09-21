@@ -66,6 +66,14 @@ public class SistemaOperativo extends Programa {
         // notebook.getRed(); // velocidad de transferencia de red en Mbps origen
         // destino.getRed(); // velocidad de transferencia de red en Mbps destino
         // peso_archivo; // peso en MB del archivo a transferir (1 MB = 8 bits)
+
+        double tiempo_segundos = 0;
+        if( notebook.getRed() >= destino.getRed() ) {
+            tiempo_segundos = peso_archivo/(destino.getRed()/8);
+        } else {
+            tiempo_segundos = peso_archivo/(notebook.getRed()/8);
+        }
+        System.out.println("El archivo demora "+tiempo_segundos+" segundos en ser transmitido.");
     }
 
     public Computador getNotebook() {

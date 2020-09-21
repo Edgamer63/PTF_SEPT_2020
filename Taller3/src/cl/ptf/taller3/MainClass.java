@@ -18,9 +18,10 @@ public class MainClass {
         double cargaTrabajo = Math.random() * (1000 - 10) + 10;
         SistemaOperativo windows = new SistemaOperativo(consumoMemoria, cargaTrabajo);
 
-        System.out.println("Sistema Operativo: "+windows.toString());
-        System.out.println("Notebook: "+windows.getNotebook().toString());
+        //System.out.println("Sistema Operativo: "+windows.toString());
+        //System.out.println("Notebook: "+windows.getNotebook().toString());
 
+        /*
         Scanner lector = new Scanner(System.in);
 
         System.out.println("Ingrese consumo memoria del programa (MB):");
@@ -31,5 +32,10 @@ public class MainClass {
         Programa chrome = new Programa(consumoMemoria, cargaTrabajo);
         System.out.println("Programa: "+chrome.toString());
         windows.ejecutar(chrome);
+        */
+
+        SistemaOperativo linux = new SistemaOperativo(4096, 10);
+        windows.enviarArchivo(8192, linux.getNotebook());
+
     }
 }
