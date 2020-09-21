@@ -37,7 +37,7 @@ public class SistemaOperativo extends Programa {
     // operación, la carga de trabajo del SO, además de la del programa.
     public void ejecutar(Programa p) {
         //this.getConsumoMemoria(); // consumo memoria Sistema Operativo
-        //p.getConsumoMemoria(); // consumo memoria Programa
+        //p.getConsumoMemoria(); // consumo memoria Programa a ejecutar
         //notebook.getMemoria(); //capacidad de memoria del Notebook
         int memoria_disponible = notebook.getMemoria() - this.getConsumoMemoria();
         if( memoria_disponible >= p.getConsumoMemoria() ) {
